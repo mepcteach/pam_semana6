@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-company-name [companyName]="'DronStore'"></app-company-name>
+    <ion-buttons slot="end">
+        <ion-menu-button menu="mainMenu"></ion-menu-button>
+   </ion-buttons>  
+  </ion-toolbar> 
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-label>
+        <h2>{{ user.name }}</h2>
+        <p>{{ user.email }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <!-- Formulario para agregar un nuevo usuario -->
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="nuevoUsuario.name" placeholder="Ingresa el nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="nuevoUsuario.email" placeholder="Ingresa el correo electrónico"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="agregarUsuario()">Agregar Usuario</ion-button>
+</ion-content>

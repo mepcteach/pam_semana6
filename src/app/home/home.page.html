@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-company-name [companyName]="'DronStore'"></app-company-name>
+    <ion-buttons slot="end">
+        <ion-menu-button menu="mainMenu"></ion-menu-button>
+   </ion-buttons>  
+  </ion-toolbar> 
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-card class="custom-card">
+    <ion-card-header class="custom-card-header">
+      <ion-card-title>{{bienvenidos}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="custom-card-content">
+      <div id="user">
+        <p>Usuario: {{ username }}</p> 
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list class="custom-list">
+     <!-- Título de la lista -->
+     <ion-list-header class="custom-list-header">
+      <ion-label>Drones Disponibles</ion-label>
+    </ion-list-header>
+    <!-- Recorre el array de productos para mostrar cada drone en la lista -->
+    <ion-item *ngFor="let producto of productos" (click)="mostrarAlerta(producto)" class="custom-list-item">
+      <ion-label>
+        <h2>{{ producto.nombre }}</h2>
+        <p>Precio: ${{ producto.precio }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

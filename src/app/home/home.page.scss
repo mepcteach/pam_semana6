@@ -1,0 +1,49 @@
+ /* Estilos para el ion-list */
+.custom-list {
+    background-color: #f0f8ff; /* Color de fondo azul claro */
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .custom-list-header {
+    background-color: #007acc; /* Color de fondo azul oscuro */
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  .custom-list-item {
+    background-color: #e0f7fa; /* Color de fondo celeste */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-list-item:hover {
+    background-color: #b2ebf2; /* Cambia el color al pasar el cursor */
+  }
+  
+  /* Estilos para el ion-card */
+  .custom-card {
+    background-color: #fff8dc; /* Fondo color amarillo claro */
+    border: 1px solid #ffd700; /* Borde color dorado */
+    border-radius: 10px;
+  }
+  
+  .custom-card-header {
+    background-color: #ffd700; /* Fondo dorado */
+    color: black;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .custom-card-content {
+    color: #333;
+    font-size: 16px;
+  }
+  
+
+  #user{
+    padding-top: 10px;
+  }

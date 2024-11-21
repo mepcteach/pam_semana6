@@ -1,0 +1,105 @@
+.login-page { 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-card { 
+    background: rgb(180, 180, 219);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    margin-top: 40%;
+  }
+  
+  .login-title {
+    font-size: 1.8rem;
+    text-align: center;
+    color: black;
+  }
+  
+  .input-item {
+    --background: transparent;
+    --placeholder-color: #ff8a00;
+    
+    ion-label {
+      color: darkblue;
+    }
+  
+    ion-input {
+      color: #333;
+    }
+  }
+  
+  .login-button {
+    --background: darkblue;
+    --border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  .register-button {
+    color: #e52e71;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+  
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  
+    a {
+      color: darkred;
+      text-decoration: underline;
+    }
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .logox {
+    width: 150px; /* Tamaño de la imagen */
+    height: auto;
+    animation: zoomIn 3s ease-in-out infinite alternate;
+  }
+  
+  /* Animación de zoom suave */
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1); /* Tamaño original */
+    }
+    100% {
+      transform: scale(0.5); /* Zoom leve */
+    }
+  }
+
+
+  .logo {
+    width: 100%; /* Ajusta el tamaño según tus necesidades */
+    animation: zoomInOut 10s infinite ease-in-out; /* Animación infinita */
+    opacity: 0;
+    animation-fill-mode: forwards; /* Mantiene el estado final */
+  }
+  
+  /* Definir la animación */
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1); /* Tamaño inicial */
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1); /* Zoom al 10% */
+      opacity: 1; /* Aparece completamente */
+    }
+    100% {
+      transform: scale(1); /* Regresa al tamaño inicial */
+      opacity: 0.8; /* Opcional: un ligero desvanecimiento */
+    }
+  }

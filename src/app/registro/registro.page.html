@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-company-name [companyName]="'DronStore'"></app-company-name>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="mainMenu"></ion-menu-button>
+   </ion-buttons>  
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true"> 
+
+   
+    <ion-card>
+
+  
+      <!-- Creamos los campos para el home-->
+      <ion-card-content>
+
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input type="text" [(ngModel)]="apellido"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label>Nivel de Educacion</ion-label>
+        <ion-select [(ngModel)]="selectedOption">
+          <ion-select-option value="option1">Universitario</ion-select-option>
+          <ion-select-option value="option2">Magister</ion-select-option>
+          <ion-select-option value="option3">Doctorado</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Fecha Nacimiento</ion-label>
+        <ion-item>  
+
+           <!-- Componente de Angular Material -->
+           <mat-form-field>
+            <mat-label>Fecha Nacimiento</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">  
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker> 
+          </mat-form-field>
+          
+          <!--  <ion-input type="date" [(ngModel)]="selectedDate"></ion-input>-->
+        </ion-item>
+      </ion-item>
+
+      </ion-card-content>
+
+        <!-- Creamos el boton -->
+
+        <ion-button (click)="guardar()" >Guardar Datos</ion-button> 
+
+    </ion-card>
+   
+</ion-content>
